@@ -1,0 +1,53 @@
+@import '~@angular/material/theming';
+h2 {
+    text-align: center;    
+}
+.buttonDiv{
+    margin-left:-25px;
+}
+img{
+    width: 70%;
+    margin-left: 45px !important;
+}
+
+.searchButton{
+    height: 79%;
+    width: 60%;
+}
+
+@media screen and  (min-width: 430px) and (max-width: 768px) {
+    .searchButton{
+        width: 100%;
+    }    
+
+    img{
+        width: 70%;
+        margin-left: 30px !important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+   
+    .buttonDiv{
+        margin-left:0px;
+    }
+    button{
+        width: 100%;
+    }
+}
+
+
+  
+  .movieInputField{
+    width: 100%;
+  }
+
+
+  .clickable:hover {
+    @include mat-elevation(8);
+   cursor: pointer;        
+ }
+
+
+
+  

@@ -1,0 +1,38 @@
+<h2>Movie Catalog</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+    
+                <mat-form-field class="movieInputField" appearance="fill">
+                  <mat-label>Enter Movie Name</mat-label>
+                  <input type="text" placeholder="Ex. Avengers" matInput
+             class="form-control" #searchField id="search-field" (keyup.enter)="searchMovies(searchField.value)" /> 
+                </mat-form-field>
+     
+        </div>
+        <div class="col-md-2 buttonDiv">
+            <span>
+                <button class="btn btn-danger searchButton" (click)="searchMovies(searchField.value)" >
+                  <span class="fa fa-search " aria-hidden="true"></span>
+                </button>
+              </span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container" >
+    <div class="row"> 
+        <div class="col-md-4" *ngFor="let movie of movieList; let i = index">
+        <div class="mat-app-background basic-container" style="margin-top:10px">
+        <mat-card   matRipple class="clickable" >       
+          <img  src="{{ movie.Poster }}" alt="{{movie.Title}}" (click)="openDialog(movie.imdbID)">
+        </mat-card>
+        </div>
+    </div>   
+                
+    </div>
+</div>

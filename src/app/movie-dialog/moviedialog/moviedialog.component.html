@@ -1,0 +1,14 @@
+<div mat-dialog-content>
+    <div class="mat-app-background basic-container" style="margin-top:10px">
+        <mat-card >       
+          <img  src="{{ movie.Poster }}" alt="{{movie.Title}}">
+      
+           <mat-card-content class="movieLink">
+               <br>
+                 <a href="https://www.imdb.com/title/{{movie.imdbID}}/" target="_blank"> 
+                <span >  {{movie.Title}}  </span>   
+                 </a>      
+          </mat-card-content>
+        </mat-card>
+        </div>
+</div>
